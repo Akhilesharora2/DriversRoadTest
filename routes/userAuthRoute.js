@@ -34,6 +34,7 @@ router.post('/subscribe', async (req,res) =>{
         res.status(400).send(error);
     }
 })
+
 //forgot-password
 router.post("/forgot-password", async (req,res) =>{
     const email = req.body.user;
@@ -48,7 +49,7 @@ router.post("/forgot-password", async (req,res) =>{
         await user.save();
 
         const resetUrl = `${BASE_URL}/Resetpassword/Resetpassword/${token}`;
-        const message = `Hello ${user.username}, \n\n Please click on the following link ${resetUrl} to reset your password. \n\n If you did not requested please don't change the email, your password will remain unchanged.\n`;
+        const message = `Hello ${user.username}, \n\n Please click on the following link ${resetUrl} to reset your password. \n\n If you did not requested please don't change, your password will remain unchanged.\n`;
         // await sendEmail(user.email, 'Reset Password', message);
         const transporter = nodemailer.createTransport({
             host: 'smtp.gmail.com',
@@ -57,7 +58,7 @@ router.post("/forgot-password", async (req,res) =>{
             // service: "gmail",
             auth:{
                 user: 'akhilarora002@gmail.com',
-                pass: 'fwjvfqokqzswikuw',
+                pass: 'qdecqypusyeuemvt',
             },
         });
 
@@ -73,7 +74,7 @@ router.post("/forgot-password", async (req,res) =>{
     }
     } catch (error) {
         console.log(error);
-        res.status(500).json({message: "Server error"});
+        res.status(500).json({message: "Server error occured!!!"});
     }
 });
 

@@ -33,9 +33,9 @@ const Subscription = require('./middleware/Subscription');
 
 
 //Router routes
-const P1Route = require('./routes/P1Route');
+// const P1Route = require('./routes/P1Route');
 const P2Route = require('./routes/P2Route');
-const E1Route = require('./routes/Exam1Route');
+// const E1Route = require('./routes/Exam1Route');
 const E2Route = require('./routes/Exam2Route');
 const E3Route = require('./routes/Exam3Route');
 const g1FinalTestRoute = require('./routes/g1FinalTestRoute');
@@ -45,6 +45,7 @@ const Subscriptions = require('./models/subscriptions');
 // app.use('/', rootRoute);
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname , 'public' , 'index.html'));
+    res.status(200).send("Home page...");
 })
 
 app.use('/register', userAuthRoute);
@@ -54,9 +55,9 @@ app.use('/message', userAuthRoute);
 app.use('/logout', userAuthRoute);
 app.use('/forgot-password', userAuthRoute);
 app.use('/Resetpassword', userAuthRoute);
-app.use('/P1', P1Route);
+// app.use('/P1', P1Route);
 app.use('/P2', P2Route);
-app.use('/E1', E1Route);
+// app.use('/E1', E1Route);
 app.use('/E2', E2Route);
 app.use('/E3', E3Route);
 app.use('/FinalAd', g1FinalTestRoute);

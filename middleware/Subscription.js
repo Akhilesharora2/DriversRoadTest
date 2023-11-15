@@ -1,5 +1,4 @@
 const subscriptions = require('../models/subscriptions');
-const { subscribe } = require('../routes/P1Route');
 
 const Subscription = async (req,res,next) =>{
     var check = req.body.subscriber;
