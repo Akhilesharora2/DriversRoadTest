@@ -2,12 +2,11 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js",
-    "build": "npm i",
-    "start": "react-scripts start"
+    "build": "npm i"
   },
   "keywords": [],
   "author": "",
@@ -25,7 +24,8 @@
     "mongoose": "^6.7.2",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.1",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "uglify-js": "^3.17.4"
