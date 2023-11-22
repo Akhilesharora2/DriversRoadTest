@@ -45,7 +45,7 @@ const Subscriptions = require('./models/subscriptions');
 // app.use('/', rootRoute);
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname , 'public' , 'index.html'));
-    res.status(200).send("Home page...");
+    //res.status(200).send("Home page...");
 })
 
 app.use('/register', userAuthRoute);
